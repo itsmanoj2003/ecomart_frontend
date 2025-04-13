@@ -1,0 +1,599 @@
+.offers-page {
+    padding: 2rem;
+    background: linear-gradient(to right, #fdfdfd, #e3f2fd);
+    font-family: "Poppins", serif;
+    min-height: 100vh;
+    margin-top: 100px;
+  }
+  
+  .offers-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .offers-header h1 {
+    font-size: 2.8rem;
+    color: #0B9F51;
+  }
+  
+  .slogan {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: gold;
+    animation: none;
+  }
+  
+  .offers-grid{
+    height: auto;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .offers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
+  .offers-details{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer-name{
+    color: #333;
+    text-decoration: underline;
+  }
+
+  .offer-percentagecont{
+    height: 100px;
+    width: 100px;
+    color: white;
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    left: 80%;
+    box-shadow: 2px 2px 5px #333;
+    animation: popup 0.5s ease-in 1;
+  }
+
+  @keyframes popup{
+    0%{
+        transform: scale(0);
+    }
+    25%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+  } 
+
+  .offer-dates {
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+    gap: 8px;
+    padding: 18px 22px;
+    border-radius: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #222;
+    overflow: hidden;
+    animation: fadeSlideIn 0.5s ease-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .offer-dates:hover {
+    transform: translateY(-4px);
+  }
+  
+  .offer-dates h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0;
+    font-family: "Poppins", serif;
+    box-shadow: 2px 2px 5px #333;
+    color: white;
+    animation: textFadeUp 0.6s forwards;
+  }
+  
+  .offer-dates h5:nth-child(1) {
+    height: 35px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0B9F51;
+    animation-delay: 0.2s;
+  }
+  
+  .offer-dates h5:nth-child(2) {
+    height: 35px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes textFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  /* Products List */
+
+  .products-list {
+    height: auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 3fr));
+    gap: 10px;
+    padding: 1rem;
+    overflow-y: auto;
+    animation: fadeIn 1s ease-in-out;
+    color: #000000;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  .product-card {
+    height: 305px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    animation: zoomIn 0.5s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .product-card:nth-child(odd) {
+    background-color: #DCEBFE;
+  }
+  
+  .product-card:nth-child(even) {
+    background-color: #FFE598;
+  }
+  
+  .offers-prodimgcont,
+  .offers-prodimg {
+    height: 150px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .offers-prodimg {
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover .offers-prodimg {
+    transform: scale(1.05);
+  }
+  
+  .offers-proddetails {
+    height: 150px;
+    width: 100%;
+    border-radius: 5px;
+    padding-top: 5px;
+    animation: slideUp 0.4s ease-in-out;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  .offers-prodname {
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .pricecont {
+    height: 30px;
+    width: 95%;
+    margin-left: 7px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .offers-price {
+    margin-right: 10px;
+    font-weight: 500;
+  }
+  
+  .mrp-rate {
+    text-decoration: line-through;
+    color: red;
+    margin-right: 10px;
+    animation: movetop 1s linear 0.3s 1;
+  }
+  
+  .discount-rate {
+    color: #0B9F51;
+    font-weight: bold;
+    animation: moveright 1s linear 0.3s 1;
+  }
+  
+  @keyframes movetop {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes moveright {
+    0% {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  
+  .offers-cartbtn {
+    height: 35px;
+    width: 150px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    color: white;
+    background-color: #0B9F51;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .offers-cartbtn:hover {
+    background-color: #06542b;
+    transform: scale(1.05);
+  }
+  
+  /* No Offers Word Animation */
+  
+  .no-orders {
+    color: #333;
+    font-size: 22px;
+    animation: bounce 1s infinite alternate ease-in-out;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+
+
+
+  /* Media query */
+
+  /* Normal Mobile */
+  @media only screen and (min-width: 300px) and (max-width: 409px) {
+    .offers-page {
+      padding: 1rem;
+      margin-top: 0px;
+    }
+  
+    .offers-header h1 {
+      font-size: 2rem;
+    }
+  
+    .offer-dates {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .offer-dates h5 {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  
+    .products-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+      gap: 30px; /* Space between grid items */
+      margin-right: 16px;
+      width: 100%;
+    }
+  
+    .product-card {
+      width: 98%;
+      height: auto;
+    }
+  
+    .offers-cartbtn {
+      width: 98%;
+      font-size: 14px;
+    }
+
+    .offers-price{
+      font-size: 15px;
+    }
+  
+    .offer-percentagecont {
+      top: 10%;
+      left: 70%;
+      width: 50px;
+      height: 50px;
+      font-size: 12px;
+      transform: scale(0.8);
+    }
+  }
+  
+
+  /* My Mobile */
+
+  @media (max-width: 360px){
+
+    .offer-percentagecont{
+      top: 10.5%;
+      left: 72%;
+    }
+
+    .offers-price, .mrp-rate,.discount-rate{
+      font-size: 12px;
+    }
+  }
+
+
+  /* iPhone 14 pro Max */
+
+  @media only screen and (min-width: 410px) and (max-width: 430px){
+
+    .offers-page {
+      padding: 1rem;
+      margin-top: 0px;
+    }
+  
+    .offers-header h1 {
+      font-size: 2rem;
+    }
+  
+    .offer-dates {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .offer-dates h5 {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  
+    .products-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+      gap: 30px; /* Space between grid items */
+      margin-right: 16px;
+      width: 100%;
+    }
+  
+    .product-card {
+      width: 98%;
+      height: auto;
+    }
+  
+    .offers-cartbtn {
+      width: 98%;
+      font-size: 14px;
+    }
+
+    .offers-price{
+      font-size: 15px;
+    }
+  
+    .offer-percentagecont {
+      top: 9.5%;
+      left: 70%;
+      width: 50px;
+      height: 50px;
+      font-size: 12px;
+      transform: scale(0.8);
+    }
+
+  }
+
+
+
+
+  /* Pixel */
+
+@media only screen and (min-width: 440px) and (max-width: 500px){
+
+  .offers-page {
+    padding: 1rem;
+    margin-top: 0px;
+  }
+
+  .offers-header h1 {
+    font-size: 2rem;
+  }
+
+  .offer-dates {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .offer-dates h5 {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .products-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+    gap: 30px; /* Space between grid items */
+    margin-right: 16px;
+    width: 100%;
+  }
+
+  .product-card {
+    width: 98%;
+    height: auto;
+  }
+
+  .offers-cartbtn {
+    width: 98%;
+    font-size: 14px;
+  }
+
+  .offers-price{
+    font-size: 15px;
+  }
+
+  .offer-percentagecont {
+    top:11%;
+    left: 70%;
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+    transform: scale(0.8);
+  }
+
+
+}
+
+
+/* Tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+  .offers-page {
+    padding: 1rem;
+    margin-top: 0px;
+  }
+
+  .offers-header h1 {
+    font-size: 2rem;
+  }
+
+  .offer-dates {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .offer-dates h5 {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .products-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two columns per row */
+    gap: 30px; /* Space between grid items */
+    margin-right: 16px;
+    width: 100%;
+  }
+
+  .product-card {
+    width: 98%;
+    height: auto;
+  }
+
+  .offers-cartbtn {
+    width: 98%;
+    font-size: 14px;
+  }
+
+  .offers-price{
+    font-size: 15px;
+  }
+
+  .offer-percentagecont {
+    top:11%;
+    left: 70%;
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+    transform: scale(0.8);
+  }
+
+}

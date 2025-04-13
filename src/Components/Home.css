@@ -1,0 +1,416 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Home First */
+
+.home{
+    margin-top: 100px;
+}
+
+.home-first{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.homemain{
+    height: 500px;
+    width: 96%;
+    margin-top: 25px;
+    border-radius: 10px;
+    background-color: #0B9F51;  
+    display: flex;
+
+}
+
+.homecontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 70px;
+}
+
+.home-title{
+    font-family: "Poppins", serif;
+    font-size: 50px;  
+    text-align: start;
+    color: white;
+    line-height: 50px;
+}
+
+.home-description{
+    text-align: start;
+    font-size:17px;
+    font-family: "Poppins", serif;
+    color: white;
+    margin-top: 20px;
+}
+
+.shopnow-btn{
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #001E2C;
+    color: white;
+    font-family: "Poppins", serif;
+    cursor: pointer;
+}
+
+.shopnow-btn:hover{
+    background-color: #022d41;
+}
+
+.home-img{
+    margin-top: 30px;
+    margin-left: 15%;
+    filter: drop-shadow(10px 10px 10px black);
+}
+
+
+/* Home Second */
+
+.home-second{
+    height: 100px;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    background-color: #F0F2F1;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.home-cartimg{
+    height: 70px;
+    margin-left: 30px;
+}
+
+.homesecond-content{
+    margin-left: 30px;
+}
+
+.homesecond-title,.homesecond-description{
+    font-family: "Poppins", serif;
+}
+
+.homesecond-description{
+    font-size: 13px;
+}
+
+.catogiries-btn{
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    margin-left: 55%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    /* background-color: #001E2C; */
+    color: #001E2C;
+    font-family: "Poppins", serif;
+    font-weight: bold;
+}
+
+
+
+/* Catogiries Section */
+
+
+.categories{
+    display: flex;
+    justify-content: center;
+}
+
+.categories-title{
+    font-family: "Poppins", serif;
+    margin-right: 60px;
+    margin-top: 30px;
+    color: #0B9F51;
+    text-decoration: underline;
+}
+
+.categories-list{
+    height: fit-content;
+    width: 90%;
+    display: grid;
+    grid-template: repeat(3,1fr)/repeat(3,1fr);
+}
+
+.category{
+    height: 150px;
+    width: 300px;
+    display: flex;
+    padding: 15px;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+
+.category:nth-child(odd){
+    background-color: #DCEBFE;
+}
+
+
+.category:nth-child(even){
+    background-color: #FFE598;
+}
+
+
+.categories-content{
+    font-family: "Poppins", serif;
+}
+
+.categories-desccont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 150px;
+    height: 100px;
+}
+
+.categories-heading{
+    font-size: 15px;
+}
+
+.categories-para{
+    font-size: 10px;
+}
+
+.categories-img{
+    height: 100px;
+    width: 150px;
+    margin-top: 20px;
+}
+
+.categories-shopbtn{
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #001E2C;
+    color: white;
+    font-family: "Poppins", serif;
+    cursor: pointer;
+}
+
+.categories-shopbtn:hover{
+    background-color: #022d41;
+}
+
+.mobilehomeimg-container,.mobilehome-img{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Media Query */
+
+/* iPhone 14 Pro */
+
+@media only screen and (min-width: 350px) and (max-width: 400px) {
+    
+    .home {
+        margin-top: 10px;
+    }
+
+    .homemain {
+        height: 400px;
+    }
+
+    .home-img {
+        display: none;
+    }
+
+    .home-title {
+        font-size: 35px;
+    }
+
+    .categories-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: 90%;
+        display: grid;
+        grid-template: repeat(1,1fr)/repeat(1,1fr);
+        margin-right: 30px;
+    }
+
+}
+
+
+
+
+
+/* iPhone 14 Pro Max */
+
+@media  (max-width: 430px)  {
+
+    .home{
+        margin-top: 10px;
+    }
+
+    .homemain{
+        height: 400px;
+    }
+
+    .home-img{
+        display: none;
+    }
+
+/* .mobilehomeimg-container,.mobilehome-img{
+        display: block;
+        height: 250px;
+        width: 300px;
+    } */
+  
+    .homecontent{
+        display: flex;
+        padding-right: 25px;
+
+    }
+
+    .home-title{
+        font-size: 35px;
+    }
+
+    .home-second{
+        display: none;
+    }
+
+    .categories-title{
+        margin-left: 50px;
+    }
+
+    .categories-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: 90%;
+        display: grid;
+        grid-template: repeat(1,1fr)/repeat(1,1fr);
+    }
+
+}
+
+
+
+
+
+/* Pixel */
+
+@media only screen and (min-width: 440px) and (max-width: 500px) {
+    
+    .home {
+        margin-top: 10px;
+    }
+
+    .homemain {
+        height: 400px;
+    }
+
+    .home-img {
+        display: none;
+    }
+
+    .home-title {
+        font-size: 45px;
+    }
+
+    
+    .home-second{
+        display: none;
+    }
+
+    .categories-title{
+        margin-left: 90px;
+        font-size: 30px;
+    }
+
+    .categories-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: 90%;
+        display: grid;
+        grid-template: repeat(1,1fr)/repeat(1,1fr);
+        margin-left: 45px;
+    }
+
+}
+
+
+
+
+
+
+/* Tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+        
+    .home {
+        margin-top: 10px;
+    }
+
+    .homemain {
+        height: 400px;
+    }
+
+    .home-img {
+        display: none;
+    }
+
+    .home-title {
+        font-size: 45px;
+    }
+
+    
+    .home-second{
+        display: none;
+    }
+
+    .categories-title{
+        margin-left: 90px;
+        font-size: 30px;
+    }
+
+    .categories-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: 90%;
+        display: grid;
+        grid-template: repeat(2,1fr)/repeat(2,1fr);
+        margin-right: 20px;
+    }
+}

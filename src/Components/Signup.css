@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.signup-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 95%;
+    background: url('../Components/assets/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 70px;
+    border-radius: 10px;
+}
+
+.signupform-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.617);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-title{
+    font-family: "Poppins", serif;
+    margin-bottom: 20px;
+    color: white;
+    text-decoration: underline;
+}
+
+.signup-form{
+    animation: fadein 2s linear 1;
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#user-field,#password-field,#mobilenumber-field,#email-field{
+    height: 40px;
+    width: 400px;
+    outline: none;
+    border: solid 1px #0B9F51;
+    padding-left: 10px;
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+#password-field,#mobilenumber-field,#email-field{
+    margin-top: 20px;
+}
+
+#signup-btn{
+    margin-top: 20px;
+    width: 413px;
+    text-align: center;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0B9F51;
+    color: white;
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#signup-btn:hover{
+    background-color: #054020;
+}
+
+
+
+/* Normal Mobiles */
+
+@media (max-width: 400px) {
+
+    .signup{
+        margin-top: 0px;
+    }
+
+    .signup-main {
+        background: url('../Components/assets/mobilelogin.jpg');
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #user-field, #password-field,#mobilenumber-field,#email-field{
+        max-width: 300px;
+    }
+
+    #signup-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+
+@media only screen and (min-width: 440px) and (max-width: 500px) {
+
+    .signup{
+        margin-top: 0px;
+    }
+
+    .signup-main {
+        background: url('../Components/assets/mobilelogin.jpg');
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
+
+
+
+/* iPhone 14 pro Max */
+
+@media only screen and (min-width: 405px) and (max-width: 430px){
+    .signup{
+        margin-top: 0px;
+    }
+
+    .signup-main {
+        background: url('../Components/assets/mobilelogin.jpg');
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #user-field, #password-field,#mobilenumber-field,#email-field{
+        max-width: 300px;
+    }
+
+    #signup-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}

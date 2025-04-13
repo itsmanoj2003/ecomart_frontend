@@ -1,0 +1,212 @@
+.profilepopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.profilepopup-main {
+    position: relative;
+    height: 400px;
+    width: 350px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Profile picture circle */
+.profilepopup-circle {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Close button */
+.profilepopupclose-btn{
+    background-color: white;
+    border: 0px;
+    cursor: pointer;
+}
+
+/* Contents */
+
+.profilepopup-box{
+    height: 400px;
+    width: 350px;
+    border:2px solid #0B9F51;
+    border-radius: 10px;
+}
+
+.profilepopup-title{
+    font-family: "Poppins", serif;
+    color: #0B9F51;
+    margin-top: 30px;
+}
+
+/* Profile Image */
+
+.profilepopup-image{
+    height: 150px;
+    width: 150px;
+    border: solid 1px;
+    border-radius: 100%;
+    margin-left: 27%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px #333;
+}
+
+.popup-image{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin-bottom: 5px;
+}
+
+/* Content Below Profile image */
+
+.profilepopup-username{
+    font-family: "Poppins", serif;
+    margin-top: 10px;
+    color: #333;
+}
+
+.profilepopup-name{
+    font-family: "Poppins", serif;
+    color: #333;
+    margin-top: 10px;
+}
+
+.profilepopup-btns{
+    height: 50px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.profile-btn{
+    font-family: "Poppins", serif;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Logout Button */
+
+.profile-btn:nth-child(odd){
+    background-color: rgb(215, 0, 0);
+}
+
+.profile-btn:nth-child(odd):hover{
+    background-color: red;
+}
+
+/* View Button */
+
+.profile-btn:nth-child(even){
+    background-color: #0B9F51;
+}
+
+.profile-btn:nth-child(even):hover{
+    background-color: #0dc563;
+}
+
+
+/* User not exist Popup */
+
+.profilepopupmain-no-user{
+    position: relative;
+    height: 400px;
+    width: 350px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.nouser-shield{
+    height: 200px;
+    width: 200px;
+    filter: drop-shadow(2px 2px 5px black);
+}
+
+.nouser-title{
+    font-family: "Poppins", serif;
+    color: #0B9F51;
+    margin-top: 20px;
+}
+
+.profilepopup-loginbtn{
+    font-family: "Poppins", serif;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(215, 0, 0);
+    margin-top: 30px;
+}
+
+.profilepopup-loginbtn:hover{
+    background-color: red;
+}
+
+
+@media  (max-width: 430px) {
+    .profilepopup-main,.profilepopup-box{
+        max-width: 300px;
+    }
+
+    .profilepopup-btns{
+        width: 290px;
+        justify-content: space-evenly;
+        margin-left: 5px;
+    }
+
+    .profile-btn{
+        width: 120px;
+    }
+}
+

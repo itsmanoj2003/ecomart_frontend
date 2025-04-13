@@ -1,0 +1,225 @@
+.adminoffers{
+    height: auto;
+    width: 100%;
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.offers-formcontainer{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.adminofferpage-heading{
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    font-size: 50px;
+    color: #0B9F51;
+    text-decoration: underline;
+}
+
+.offersback-btn{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Poppins", serif;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    margin-left: 80%;
+}
+
+.offersback-btn:hover{
+    background-color: rgb(210, 11, 11);
+}
+
+.offers-form{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+
+.adminoffers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-left: 30px;
+  }
+  
+  .adminoffers-productdetails {
+    width: 425px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #333;
+  }
+
+.product-headcount{
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    color: #0B9F51;
+}
+  
+.admin-offersinput{
+    height: 40px;
+    width: 400px;
+    outline: none;
+    border: solid 1px #0B9F51;
+    padding-left: 10px;
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+
+
+.offersimg-addbtn{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0B9F51;
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px black;
+}
+
+.offersimg-addbtn:hover{
+    background-color: #076d36;
+}
+
+
+.offersimages-label{
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    color: #333;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+  
+
+.adminoffers-productdetails{
+    margin-top: 30px;
+}
+
+.admin-productoffersinput{
+    height: 40px;
+    width: 400px;
+    outline: none;
+    border: solid 1px red;
+    padding-left: 10px;
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+
+.admin-productoffersselect{
+    height: 40px;
+    width: 420px;
+    outline: none;
+    border: solid 1px red;
+    padding-left: 10px;
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+
+
+.offersproductdelete-btn{
+    height: 35px;
+    width: 120px;
+    border: none;
+    background-color:  rgb(215, 0, 0);
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.offersproductdelete-btn:hover{
+    background-color: red;
+}
+
+.addproducts-btn{
+    height: 35px;
+    width: 120px;
+    border: none;
+    background-color:  #3498db;
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addproducts-btn:hover{
+    background-color: #0f4a71;
+}
+
+.postorders-btn{
+    height: 35px;
+    width: 200px;
+    background-color: #0B9F51;
+    color: white;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.postorders-btn:hover{
+    background-color: #076d36;
+}
+
+
+/* Offers List */
+
+.offerslist{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.offerslist-heading{
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    font-size: 50px;
+    color: #0B9F51;
+    text-decoration: underline;
+}
+
+.offers-container{
+    height: auto;
+    width: 90%;
+    border: 1px solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background-color: #DCEBFE;
+}
+

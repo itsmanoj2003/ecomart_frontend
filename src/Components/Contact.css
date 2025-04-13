@@ -1,0 +1,599 @@
+.contact{
+    height: 610px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.contact-main{
+    width: 95%;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #0B9F51; 
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Contact Content */
+
+.contact-content{
+    height: 300px;
+    width: 500px;
+    margin-top: 5%;
+    border-radius: 5px;
+    border: 2px dashed white;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-legent{
+    text-align: start;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    color: white;
+}
+
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.socialmedia-names{
+    color: #FFD700;
+    font-family: "Poppins", serif;
+    margin-left: 30px;
+    display: block;
+    text-align: start;
+}
+
+.whatsappnumber,.instagramid,.gmailaccount{
+    text-align: start;
+    color: white;
+    font-size: 15px;
+    text-shadow: 2px 2px 5px #333;
+}
+
+
+
+/* Image Containers */
+
+/* Container 1 */
+
+.contactimg-container1{
+    border: 2px solid;
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    border: none;
+    border-top-right-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px #333;
+    background-color: white;
+    border-left: solid 1px;
+    border-bottom: solid 1px;
+}
+
+/* Images inside contactimg-container1 */
+.whatsapp-img {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    filter: drop-shadow(3px 3px 8px black);
+    animation: popup 0.5s ease-in 1;
+}
+
+.instagram-img {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    filter: drop-shadow(3px 3px 8px black);
+    animation: popup 0.5s ease-in 1;
+}
+
+.gmail-img {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    filter: drop-shadow(3px 3px 8px black);
+    animation: popup 0.5s ease-in 1;
+}
+
+
+.contact-title{
+    font-size: 70px;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    color: #0B9F51;
+}
+
+.address-title{
+    text-align: start;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    color: #333;
+    margin-top: 50%;
+    margin-left: 12%;
+}
+
+.address-container{
+    height: 100px;
+    width: 350px;
+    margin-left: 12%;
+}
+
+.mart-address{
+    font-family: "Poppins", serif;
+    text-align: start;
+    margin-left: 3%;
+}
+
+/* Container 2 */
+
+.contactimg-container2{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-bottom-left-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -10px 0px 10px #333;
+    background-color: white;
+    border-top: solid 1px;
+    border-right: solid 1px;
+}
+
+/* Images inside contactimg-container2 */
+
+.phone-img{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left:86%;
+    bottom: 55%;
+    filter: drop-shadow(3px 3px 8px black);
+    animation: popup 0.5s ease-in 1;
+}
+
+/* Animations for all images */
+
+@keyframes popup{
+    0%{
+        transform: scale(0);
+    }
+    25%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+
+
+/* Media Query */
+
+/* iPhone 14 Pro */
+
+@media only screen and (min-width: 370px) and (max-width: 400px) {
+
+    .contact{
+        margin-top: 100px;
+    }
+
+    .contact-main{
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .contactimg-container1{
+        height: 200px;
+        width: 375px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 2px 2px 5px #333;
+    }
+
+    .contact-title{
+        top: 12%;
+        font-size: 30px;
+    }
+
+    .address-title{
+        margin-top: 20%;
+        margin-left: 15px;
+    }
+
+    .address-container{
+        margin-left: 15px;
+    }
+
+    .whatsapp-img{
+        height: 70px;
+        width: 70px;
+        left: 75%;
+        top: 9%;
+    }
+
+    .instagram-img{
+        height: 70px;
+        width: 70px;
+        top: 25%;
+    }
+
+    .gmail-img{
+        height: 70px;
+        width: 70px;
+        top: 53%;
+        right: 77%;
+    }
+
+    .phone-img {
+        height: 100px;
+        width: 100px;
+        top: 62%;
+        left: 70%;
+    }
+
+    .contact-content{
+        margin-left: 20px;
+        height: 260px;
+        width: 300px;
+        padding-right: 20px;
+    }
+
+    .contactimg-container2{
+        height: 150px;
+        width: 150px;
+        border-radius: 10px;
+        border-top-left-radius: 100%;
+        margin-left: 225px;
+    }
+}
+
+
+/* iPhone 14 Pro Max */
+
+@media only screen and (min-width: 405px) and (max-width: 430px){
+    .contact{
+        margin-top: 100px;
+    }
+
+    .contact-main{
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .contactimg-container1{
+        height: 200px;
+        width: 408px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 2px 2px 5px #333;
+    }
+
+    .contact-title{
+        top: 12%;
+        font-size: 30px;
+    }
+
+    .address-title{
+        margin-top: 20%;
+        margin-left: 15px;
+    }
+
+    .address-container{
+        margin-left: 15px;
+    }
+
+    .whatsapp-img{
+        height: 70px;
+        width: 70px;
+        left: 77%;
+        top: 8%;
+    }
+
+    .instagram-img{
+        height: 70px;
+        width: 70px;
+        top: 23%;
+    }
+
+    .gmail-img{
+        height: 70px;
+        width: 70px;
+        top: 48%;
+        right: 77%;
+    }
+
+    .phone-img {
+        height: 100px;
+        width: 100px;
+        top: 57%;
+        left: 72%;
+    }
+
+    .contact-content{
+        margin-left: 20px;
+        height: 260px;
+        width: 365px;
+    }
+
+    .contactimg-container2{
+        height: 150px;
+        width: 150px;
+        border-radius: 10px;
+        border-top-left-radius: 100%;
+        margin-left: 260px;
+    }
+}
+
+
+
+/* Pixel */
+
+@media only screen and (min-width: 440px) and (max-width: 500px) {
+    .contact{
+        margin-top: 100px;
+    }
+
+    .contact-main{
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .contactimg-container1{
+        height: 200px;
+        width: 456px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 2px 2px 5px #333;
+    }
+
+    .contact-title{
+        top: 15%;
+        font-size: 30px;
+    }
+
+    .address-title{
+        margin-top: 20%;
+        margin-left: 15px;
+    }
+
+    .address-container{
+        margin-left: 15px;
+    }
+
+    .whatsapp-img{
+        height: 70px;
+        width: 70px;
+        left: 78%;
+        top: 10%;
+    }
+
+    .instagram-img{
+        height: 70px;
+        width: 70px;
+        top: 27%;
+    }
+
+    .gmail-img{
+        height: 70px;
+        width: 70px;
+        top: 58%;
+        right: 80%;
+    }
+
+    .phone-img {
+        height: 100px;
+        width: 100px;
+        top: 68%;
+        left: 75%;
+    }
+
+    .contact-content{
+        margin-left: 20px;
+        height: 260px;
+        width: 410px;
+    }
+
+    .contactimg-container2{
+        height: 150px;
+        width: 150px;
+        border-radius: 10px;
+        border-top-left-radius: 100%;
+        margin-left: 307px;
+    }
+}
+
+
+
+/* My Mobile */
+
+@media (max-width: 360px){
+    .contact{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .contact-main{
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .contactimg-container1{
+        height: 200px;
+        width: 340px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 2px 2px 5px #333;
+        
+    }
+
+    .contact-title{
+        top: 20%;
+        font-size: 30px;
+    }
+
+    .address-title{
+        margin-top: 22%;
+        margin-left: 15px;
+    }
+
+    .address-container{
+        margin-left: 15px;
+    }
+
+    .whatsapp-img,.instagram-img,.gmail-img,.phone-img{
+        display: none;
+    }
+
+    .contact-content{
+        margin-left: 20px;
+        height: 220px;
+        width: 280px;
+        padding-right: 20px;
+    }
+
+    .socialmedia-names,.whatsappnumber,.instagramid,.gmailaccount{
+        font-size: 12px;
+    }
+
+    .contactimg-container2{
+        height: 150px;
+        width: 150px;
+        border-radius: 10px;
+        border-top-left-radius: 100%;
+        margin-left: 192px;
+    }
+}
+
+
+/* Tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .contact{
+        margin-top: 150px;
+    }
+
+    .contact-main{
+        flex-direction: column;
+        height: 800px;
+    }
+
+    .contactimg-container1{
+        height: 230px;
+        width: 780px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 2px 2px 5px #333;
+    }
+
+    .contact-title{
+        top: 12%;
+        font-size: 50px;
+    }
+
+    .address-title{
+        margin-top: 12%;
+        margin-left: 35px;
+    }
+
+    .address-container{
+        margin-left: 35px;
+    }
+
+    .whatsapp-img{
+        height: 100px;
+        width: 100px;
+        left: 78%;
+        top: 8%;
+    }
+
+    .instagram-img{
+        height: 100px;
+        width: 100px;
+        top: 25%;
+    }
+
+    .gmail-img{
+        height: 100px;
+        width: 100px;
+        top: 53%;
+        right: 72%;
+    }
+
+    .phone-img {
+        height: 120px;
+        width: 120px;
+        top: 66%;
+        left: 80%;
+    }
+
+    .contact-content{
+        margin-left: 18%;
+        height: 260px;
+        width: 500px;
+    }
+
+    .contactimg-container2{
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        border-top-left-radius: 100%;
+        margin-left: 580px;
+    }
+}
+
+
+/* Macbook Air */
+
+@media only screen and (min-width: 1550px) and (max-width: 1560px){
+
+    .contact-title{
+        top: 35%;
+    }
+
+    .instagram-img{
+        left: 35%;
+    }
+
+    .gmail-img{
+        bottom: 30%;
+    }
+
+    .phone-img{
+        top: 20%;
+    }
+}
+
+
+
+
+
+
