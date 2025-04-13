@@ -27,7 +27,7 @@ export default function Deliveryboy() {
     }
 
     axios
-      .put(`http://localhost:3001/ecomart/mark-delivered/${selectedOrderId}`, {
+      .put(`https://ecomart-api-c4er.onrender.com/ecomart/mark-delivered/${selectedOrderId}`, {
         deliveredBy: deliveryBoyName,
       })
       .then(() => {
