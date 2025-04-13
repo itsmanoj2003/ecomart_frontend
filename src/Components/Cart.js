@@ -52,14 +52,14 @@ export default function Cart() {
         );
     };
 
-    const handleOrder = async (e) => {
+    const handleOrder = (e) => {
         e.preventDefault();
-
+    
         if (!orderdata.name || !orderdata.mobile || !orderdata.address) {
             alert("Please fill in all the required fields.");
             return;
         }
-
+    
         const updatedOrder = {
             ...orderdata,
             items: cart.map(item => ({
@@ -70,24 +70,25 @@ export default function Cart() {
             })),
             total: totalPrice
         };
-
+    
         setOrderdata(updatedOrder);
-
-        try {
-            await axios.post("http://localhost:3001/ecomart/order", updatedOrder);
-            alert("Order Placed Successfully!");
-        } catch (error) {
-            console.error("Order Failed:", error);
-            alert("Order Failed! Try Again.");
-        }
-        clearCart();
-        setMsg('Happy Shopping! Your Order is Placed 🌟');
-        localStorage.setItem("latestOrder", JSON.stringify(updatedOrder));
-        setTimeout(() => {
-            navigate('/ordersuccess');
-        }, 1000);
+    
+        axios.post("https://ecomart-api-c4er.onrender.com/ecomart/order", updatedOrder)
+            .then(res => {
+                alert("Order Placed Successfully!");
+                clearCart();
+                setMsg('Happy Shopping! Your Order is Placed 🌟');
+                localStorage.setItem("latestOrder", JSON.stringify(updatedOrder));
+                setTimeout(() => {
+                    navigate('/ordersuccess');
+                }, 1000);
+            })
+            .catch(error => {
+                console.error("Order Failed:", error);
+                alert("Order Failed! Try Again.");
+            });
     };
-
+    
     return (
         <div className='cart'>
             <div className="cart-page">
