@@ -22,7 +22,8 @@ export default function Admin() {
         pname:'',
         pcategory:'',
         pprice:'',
-        pdesc:'',
+        pmrp:'',
+        pquantity:'',
         pimg:''
     })
 
