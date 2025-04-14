@@ -10,13 +10,12 @@
 //     const [searchQuery, setSearchQuery] = useState("");  // Store search input
 
 //     useEffect(() => {
-//         axios.get('http://localhost:3001/ecomart/getproddata')
+//         axios.get('https://ecomart-api-c4er.onrender.com/ecomart/getproddata')
 //             .then(res => setData(res.data))
 //             .catch(err => console.log(err));
 //     }, []);
 
 //     const { addToCart } = useCart();
-
 
 //     const filteredData = data.map(category => ({
 //         ...category,
@@ -70,9 +69,8 @@
 //                                             <div className='product-contentcontainer'>
 //                                                 <h2 className='product-name'>{x.pname}</h2>
 //                                                 <label className='product-price'>Price Rs.{x.pprice}</label><br />
-//                                                 <p className='product-description'><b>MRP</b>  Rs.
-//                                                      {x.pdesc.length > 5 ? x.pdesc.substring(0, 30) + "..." : x.pdesc}
-//                                                 </p>
+//                                                 <p className='product-mrp'>MRP  Rs.{x.pmrp}</p>
+//                                                 <p className='product-quantity'><b>Quantity:</b> {x.pquantity}</p>
 //                                             </div>
 //                                             <div className='product-btncontainer'>
 //                                                 <button className='cart-btn' onClick={() => addToCart(x)}>Add to Cart</button>
@@ -90,7 +88,6 @@
 //         </div>
 //     );
 // }
-
 
 
 import React, { useEffect, useState } from 'react';
@@ -112,13 +109,17 @@ export default function Products() {
 
     const { addToCart } = useCart();
 
-    const filteredData = data.map(category => ({
-        ...category,
-        products: category.products.filter(product =>
-            product.pname.toLowerCase().includes(searchQuery.toLowerCase()) || 
-            product.pcategory.toLowerCase().includes(searchQuery.toLowerCase()) 
-        )
-    })).filter(category => category.products.length > 0);
+    // Filter out "Out of Stock" category and products that match the search query
+    const filteredData = data
+        .filter(category => category._id !== "Out of Stock") // Filter out the "Out of Stock" category
+        .map(category => ({
+            ...category,
+            products: category.products.filter(product =>
+                product.pname.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                product.pcategory.toLowerCase().includes(searchQuery.toLowerCase()) 
+            )
+        }))
+        .filter(category => category.products.length > 0); // Only include categories with products
 
     return (
         <div className='products'>
