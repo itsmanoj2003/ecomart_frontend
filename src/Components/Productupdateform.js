@@ -6,7 +6,7 @@ export default function Productupdateform({ setUpdatepopup, data }) {
     const [list, setList] = useState([
         'Dry Products', 'Sauces', 'Snacks', "Women's beauty", "Men's beauty",
         'Health care', 'Dairy and Beverages', 'Cleaning Agents', 'Devotional products',
-        'Baby products', 'Toys and gifts', 'Home Hold'
+        'Baby products', 'Toys and gifts', 'Home Hold','Out of Stock'
     ]);
 
     const [quantity, setQuantity] = useState(['1 Piece', '1 Kg', '1 Packet', '1 Litre','1 Bottle']);
