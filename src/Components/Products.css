@@ -118,9 +118,21 @@
 
 /* General Wrapper */
 .product-menu {
-    width: 100%;
+    width: 95%;
     padding: 40px 20px;
     background: #f5f7fa;
+    animation: fadeInSlideUp 0.6s ease-in-out;
+  }
+
+  @keyframes fadeInSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .product-wrapper {
@@ -147,6 +159,9 @@
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 20px;
   }
+
+  
+  
   
   @media (max-width: 480px) {
     .product-grid {
@@ -157,7 +172,7 @@
   
   /* Product Card */
   .product-card {
-    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    background: linear-gradient(135deg, #b8e994, #78e08f);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -199,7 +214,7 @@
   .price {
     font-size: 0.95rem;
     font-weight: bold;
-    color: #2d3436;
+    color: green;
     margin-top: 5px;
   }
   
