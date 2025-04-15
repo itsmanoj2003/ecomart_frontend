@@ -148,38 +148,33 @@ export default function Products() {
             </div>
 
             {/* Second Products Container */}
-            <div className='products-menu'>
-                <div className='all-productscontainer'>
-                    {filteredData.length > 0 ? (
-                        filteredData.map((category, key) => (
-                            <div key={key} className="category-container">
-                                {/* Category Title */}
-                                <h1 className='category-title'>{category._id}</h1>
-                                {/* Products Column */}
-                                <div className="products-grid">
-                                    {category.products.map((x, index) => (
-                                        <div key={index} className='product-container'>
-                                            <div className='product-imgcontainer'>
-                                                <img src={x.pimg} className='product-image' alt={x.pname} />
-                                            </div>
-                                            <div className='product-contentcontainer'>
-                                                <h2 className='product-name'>{x.pname}</h2>
-                                                <label className='product-price'>Price Rs.{x.pprice}</label><br />
-                                                <p className='product-mrp'>MRP  Rs.{x.pmrp}</p>
-                                                <p className='product-quantity'><b>Quantity:</b> {x.pquantity}</p>
-                                            </div>
-                                            <div className='product-btncontainer'>
-                                                <button className='cart-btn' onClick={() => addToCart(x)}>Add to Cart</button>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
+            <div className="product-menu">
+            <div className="product-wrapper">
+                {filteredData.length > 0 ? (
+                filteredData.map((category, key) => (
+                    <div key={key} className="category-section">
+                    <h2 className="category-heading">{category._id}</h2>
+                    <div className="product-grid">
+                        {category.products.map((product, index) => (
+                        <div key={index} className="product-card">
+                            <div className="product-image-wrapper">
+                            <img src={product.pimg} alt={product.pname} className="product-image" />
                             </div>
-                        ))
-                    ) : (
-                        <h2 className='no-results'>No products found</h2>
-                    )}
-                </div>
+                            <div className="product-details">
+                            <h3>{product.pname}</h3>
+                            <p className="price">Rs. {product.pprice} <span className="mrp">MRP: Rs. {product.pmrp}</span></p>
+                            <p>Qty: {product.pquantity}</p>
+                            </div>
+                            <button className="add-cart-btn" onClick={() => addToCart(product)}>Add to Cart</button>
+                        </div>
+                        ))}
+                    </div>
+                    </div>
+                ))
+                ) : (
+                <h3 className="no-products">No products found</h3>
+                )}
+            </div>
             </div>
         </div>
     );

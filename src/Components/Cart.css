@@ -389,3 +389,19 @@
         align-self: flex-end;
     }
 }
+
+/* My Mobile */
+
+@media (max-width: 360px){
+
+    .cartform-name,.cart-mobilenumber,.cart-address{
+        width: 300px;
+    }
+
+    .get-location-btn{
+        width: 200px;
+        font-size: 12px;
+        font-family: "Poppins", serif;
+    }
+
+}
