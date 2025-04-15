@@ -285,6 +285,12 @@
         transition: 0.2s;
         align-self: flex-end;
     }
+
+    .get-location-btn{
+        width: 200px;
+        font-size: 12px;
+        font-family: "Poppins", serif;
+    }
 }
 
 
@@ -388,11 +394,22 @@
         transition: 0.2s;
         align-self: flex-end;
     }
+
+    .get-location-btn{
+        width: 200px;
+        font-size: 12px;
+        font-family: "Poppins", serif;
+    }
 }
 
 /* My Mobile */
 
 @media (max-width: 360px){
+
+    .cart{
+        height: auto;
+        overflow: hidden;
+    }
 
     .cartform-name,.cart-mobilenumber,.cart-address{
         width: 300px;
