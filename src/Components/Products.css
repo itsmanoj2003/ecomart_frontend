@@ -164,6 +164,11 @@
   
   
   @media (max-width: 480px) {
+
+    .products{
+        overflow: hidden;
+    }
+      
     .product-grid {
       grid-template-columns: repeat(2, 1fr); /* 2 products per row on mobile */
       gap: 15px;
@@ -381,6 +386,7 @@
 @media only screen and (min-width: 440px) and (max-width: 500px){
     .products{
         margin-top: 0px;
+        overflow: hidden;
     }
 
     .products-main{
