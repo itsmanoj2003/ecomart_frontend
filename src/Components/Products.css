@@ -160,6 +160,10 @@
     gap: 20px;
   }
 
+  .product-card {
+    max-width: 200px;
+  }
+
   
   
   
