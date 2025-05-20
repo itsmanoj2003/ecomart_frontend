@@ -39,9 +39,15 @@ strong{
     color: yellow;
 }
 
+.cont-details{
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-left a {
   color: white;
   text-decoration: none;
+  margin-bottom: 10px;
 }
 
 .contact-left a:hover {
