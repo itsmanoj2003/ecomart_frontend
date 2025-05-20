@@ -15,6 +15,7 @@
   overflow: hidden;
   box-shadow: 0 0 20px #333;
   background-color: #0B9F51;
+  margin-top: 100px;
 }
 
 .contact-left, .contact-right {
@@ -99,63 +100,129 @@ strong{
 
 /* Responsive */
 @media screen and (max-width: 825px) {
-  .contact-card {
-    flex-direction: column;
-    width: 90%;
+ .contact-wrapper {
+    margin-top: 50px;
+    padding: 0 10px;
   }
 
-  .addr{
-        margin-bottom: 20px;
-    }
+  .contact-card {
+    margin-top: 20px;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+  }
 
-    strong,.cont-details{
-        font-size: 15px;
-    }
+  .contact-left, .contact-right {
+    padding: 20px;
+  }
 
-    .social-icon{
-        margin-right: 0px;
-    }
+  .contact-left h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
 
-    .instagram,.whatsapp,.email{
-        width: 20px;
-        height: 20px;
-    }
+  .contact-left a{
+    margin-bottom: 10px;
+  }
+
+  .addr {
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  strong, .cont-details {
+    font-size: 13px;
+    display: block;
+    text-align: center;
+  }
+
+  .social-icon {
+    font-size: 1.6rem;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+  }
+
+  .contact-right {
+    padding: 20px;
+  }
+
+  .contact-right h3 {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .contact-right p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: center;
+  }
 
 }
 
-@media screen and (max-width: 360px){
 
-    strong,.cont-details{
-        font-size: 12px;
-    }
+@media screen and (max-width: 360px) {
+  .contact-wrapper {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
 
-    .addr{
-        font-size: 13px;
-        margin-bottom: 20px;
-    }
+  .contact-card {
+    margin-top: 20px;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+  }
 
+  .contact-left, .contact-right {
+    padding: 20px;
+  }
 
-    .social-icon{
-        margin-right: 0px;
-    }
+  .contact-left h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
 
-    .instagram,.whatsapp,.email{
-        width: 20px;
-        height: 20px;
-    }
+  .contact-left a{
+    margin-bottom: 10px;
+  }
 
-    .contact-right{
-        padding-left: 30px;
-        padding-right: 40px;
-    }
+  .addr {
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
 
-    .contact-right h3{
-        font-size: 17px;
-    }
+  strong, .cont-details {
+    font-size: 13px;
+    display: block;
+    text-align: center;
+  }
 
-    .contact-right p{
-        font-size: 15px;
-        margin-right: 20px;
-    }
+  .social-icon {
+    font-size: 1.6rem;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+  }
 
-} 
+  .contact-right {
+    padding: 20px;
+  }
+
+  .contact-right h3 {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .contact-right p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
