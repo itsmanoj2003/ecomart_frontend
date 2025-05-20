@@ -73,21 +73,25 @@ export default function Navbar() {
 
       {/* Mobile navlinks */}
 
-    {toggle &&  
-    <div className='mobile-menucontainer'>
-    <div className='mobile-navbar'>
-   <NavLink to='/' onClick={()=>setToggle(!toggle)} className='navlink' >Home</NavLink>
-   <NavLink to='/products' onClick={()=>setToggle(!toggle)} className='navlink'>Products</NavLink>
-   <NavLink to='/cart' onClick={()=>setToggle(!toggle)} className='navlink' >Cart</NavLink>
-   <NavLink to='/offers' onClick={()=>setToggle(!toggle)} id='offers'>Special Offers</NavLink>
-   <NavLink to='/about' onClick={()=>setToggle(!toggle)} className='navlink'>About</NavLink>
-   <NavLink to='/contact' onClick={()=>setToggle(!toggle)} className='navlink'>Contact</NavLink>
-   {auth.user?.email === "orders@gmail.com" && <NavLink to='/orders' onClick={()=>setToggle(!toggle)} className='navlink'>Orders</NavLink>}
-   {auth.user && <NavLink to='/account' onClick={()=>setToggle(!toggle)} className='navlink'>Account</NavLink>}
-   {!auth.user && <NavLink to='/login' onClick={()=>setToggle(!toggle)} className='navlink'>Login</NavLink>}
-   {!auth.user && <NavLink to='/signup' onClick={()=>setToggle(!toggle)} className='navlink'>Signup</NavLink>}
+    {toggle && (
+  <div className="mobile-menu-overlay">
+    <div className="mobile-navbar animated-navbar">
+      <NavLink to="/" onClick={() => setToggle(false)} className="navlink">Home</NavLink>
+      <NavLink to="/products" onClick={() => setToggle(false)} className="navlink">Products</NavLink>
+      <NavLink to="/cart" onClick={() => setToggle(false)} className="navlink">Cart</NavLink>
+      <NavLink to="/offers" onClick={() => setToggle(false)} className="navlink">Special Offers</NavLink>
+      <NavLink to="/about" onClick={() => setToggle(false)} className="navlink">About</NavLink>
+      <NavLink to="/contact" onClick={() => setToggle(false)} className="navlink">Contact</NavLink>
+      {auth.user?.email === "orders@gmail.com" && (
+        <NavLink to="/orders" onClick={() => setToggle(false)} className="navlink">Orders</NavLink>
+      )}
+      {auth.user && <NavLink to="/account" onClick={() => setToggle(false)} className="navlink">Account</NavLink>}
+      {!auth.user && <NavLink to="/login" onClick={() => setToggle(false)} className="navlink">Login</NavLink>}
+      {!auth.user && <NavLink to="/signup" onClick={() => setToggle(false)} className="navlink">Signup</NavLink>}
     </div>
-    </div>}
+  </div>
+)}
+
 
     </div>
   )

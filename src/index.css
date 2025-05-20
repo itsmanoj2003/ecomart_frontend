@@ -146,46 +146,44 @@ hr{
 
 
 
-/* Media Query */
-
-/* iPhone 14 Pro */
 
 
-@media (max-width: 430px) {
-
-  .nav-headerbottom,.user-btn,.nav-searchbar{
+@media (max-width: 1024px) {
+  .nav-headerbottom,
+  .user-btn,
+  .nav-searchbar {
     display: none;
   }
 
-  .navbar-container{
+  .navbar-container {
     position: relative;
   }
 
-  .nav-headertop{
+  .nav-headertop {
     width: 100%;
     margin-top: 10px;
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
   }
 
-  .mainlogo{
+  .mainlogo {
     height: 30px;
     width: 30px;
   }
 
-  .martname{
+  .martname {
     font-size: 20px;
     margin-top: 5px;
   }
 
-  .mobile-user-menu{
+  .mobile-user-menu {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
   }
 
-  .mobile-userbtn{
+  .mobile-userbtn {
     width: 30px;
     height: 30px;
     background-color: white;
@@ -195,267 +193,87 @@ hr{
     display: flex;
   }
 
-  .user-logo{
+  .user-logo {
     height: 25px;
   }
 
-  .mobile-menubtn{
+  .mobile-menubtn {
     padding: 2px;
     border-radius: 5px;
-    border:solid 1px #0B9F51;
+    border: solid 1px #0B9F51;
     background-color: white;
     box-shadow: 2px 2px 5px #333;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 1001;
   }
 
-  .mobile-menuimg{
+  .mobile-menuimg {
     height: 25px;
     width: 30px;
     padding: 2px;
   }
 
-  .mobile-menucontainer{
-    width: 100%;
+  /* ✅ UPDATED ANIMATED NAVBAR STYLE (Design 1) */
+
+  .mobile-menu-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    /* background-color: white; */
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 70px;
+    height: 100vh;
+    width: 100vw;
+    /* backdrop-filter: blur(6px); */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
   }
 
-  .mobile-navbar{
+  .animated-navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;        /* reduced from 80% */
+    height: 60vh;      /* reduced from 70vh */
+    background: #0B9F51;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: slideRight 0.4s ease forwards;
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
-    width: 85%;
+    padding-top: 60px;
+    gap: 20px;
+    overflow-y: auto;
+    border-bottom-left-radius: 20px;
+    border-radius: 10px;
   }
 
-  .navlink,#offers{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid ;
-    height: 50px;
-    width: 100%;
-    background-color: #0B9F51;
-    color: white;
-  }
 
-  .navlink:hover{
-    background-color: #05542a;
-  }
-
-}
-
-
-
-/* Pixel */
-
-@media only screen and (min-width: 440px) and (max-width: 500px) {
-  .nav-headerbottom,.user-btn,.nav-searchbar{
-    display: none;
-  }
-
-  .navbar-container{
-    position: relative;
-  }
-
-  .nav-headertop{
-    width: 100%;
-    margin-top: 10px;
-    display: flex;
-    justify-content:space-between ;
-  }
-
-  .mainlogo{
-    height: 30px;
-    width: 30px;
-  }
-
-  .martname{
+  .navlink,
+  #offers {
     font-size: 20px;
-    margin-top: 5px;
-  }
-
-  .mobile-user-menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-  }
-
-  .mobile-userbtn{
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    margin-right: 30px;
-    display: flex;
-  }
-
-  .user-logo{
-    height: 25px;
-  }
-
-  .mobile-menubtn{
-    padding: 2px;
-    border-radius: 5px;
-    border:solid 1px #0B9F51;
-    background-color: white;
-    box-shadow: 2px 2px 5px #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-
-  .mobile-menuimg{
-    height: 25px;
-    width: 30px;
-    padding: 2px;
-  }
-
-  .mobile-menucontainer{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* background-color: white; */
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 70px;
-  }
-
-  .mobile-navbar{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 10px;
-    width: 85%;
-  }
-
-  .navlink,#offers{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid ;
-    height: 50px;
-    width: 100%;
-    background-color: #0B9F51;
     color: white;
-  }
-
-  .navlink:hover{
-    background-color: #05542a;
-  }
-}
-
-
-
-/* Tablet */
-
-@media only screen and (min-width: 768px) and (max-width: 1024px){
-
-  .nav-headerbottom,.user-btn,.nav-searchbar{
-    display: none;
-  }
-
-  .navbar-container{
-    position: relative;
-  }
-
-  .nav-headertop{
-    width: 100%;
-    margin-top: 10px;
-    display: flex;
-    justify-content:space-between ;
-  }
-
-  .mainlogo{
-    height: 30px;
-    width: 30px;
-  }
-
-  .martname{
-    font-size: 20px;
-    margin-top: 5px;
-  }
-
-  .mobile-user-menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-  }
-
-  .mobile-userbtn{
-    width: 30px;
-    height: 30px;
-    background-color: white;
+    text-align: center;
+    padding: 15px;
+    background-color: transparent;
     border: none;
-    cursor: pointer;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+    transition: all 0.3s ease;
     margin-right: 30px;
-    display: flex;
   }
 
-  .user-logo{
-    height: 25px;
+  .navlink:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.03);
   }
 
-  .mobile-menubtn{
-    padding: 2px;
-    border-radius: 5px;
-    border:solid 1px #0B9F51;
-    background-color: white;
-    box-shadow: 2px 2px 5px #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  @keyframes slideRight {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 0;
+    }
   }
-
-  .mobile-menuimg{
-    height: 25px;
-    width: 30px;
-    padding: 2px;
-  }
-
-  .mobile-menucontainer{
-    width: 875px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* background-color: white; */
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 70px;
-  }
-
-  .mobile-navbar{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 10px;
-    width: 85%;
-  }
-
-  .navlink,#offers{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid ;
-    height: 50px;
-    width: 100%;
-    background-color: #0B9F51;
-    color: white;
-  }
-
-  .navlink:hover{
-    background-color: #05542a;
-  }
-
 }
