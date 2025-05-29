@@ -172,7 +172,7 @@ export default function Products() {
                     </div>
                 ))
                 ) : (
-                <h3 className="no-products">No products found</h3>
+                <h3 className="no-products">Loading...</h3>
                 )}
             </div>
             </div>
