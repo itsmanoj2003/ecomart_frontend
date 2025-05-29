@@ -108,7 +108,7 @@ export default function Offers() {
             </div>
           ))
         ) : (
-          <h3 className="no-orders">No Offers found.</h3>
+          <h3 className="no-orders">Loading...</h3>
         )}
       </div>
     </div>
