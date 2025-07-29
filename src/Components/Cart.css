@@ -186,7 +186,7 @@
 
 @media (max-width: 430px) {
 
-    .cartform-name,.cart-mobilenumber,.cart-address,.cart-city{
+    .cartform-name,.cart-mobilenumber,.cart-address{
         width: 330px;
     }
 
