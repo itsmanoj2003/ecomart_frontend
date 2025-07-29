@@ -28,7 +28,7 @@
     color: #888;
 }
 
-.cartform-name,.cart-mobilenumber{
+.cartform-name,.cart-mobilenumber,.cart-city{
     height: 40px;
     width: 400px;
     outline: none;
@@ -186,7 +186,7 @@
 
 @media (max-width: 430px) {
 
-    .cartform-name,.cart-mobilenumber,.cart-address{
+    .cartform-name,.cart-mobilenumber,.cart-address,.cart-city{
         width: 330px;
     }
 
@@ -412,7 +412,7 @@
         overflow: hidden;
     }
 
-    .cartform-name,.cart-mobilenumber,.cart-address{
+    .cartform-name,.cart-mobilenumber,.cart-address,.cart-city{
         width: 300px;
     }
 
