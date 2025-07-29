@@ -41,6 +41,7 @@ const Contact = () => {
       <div className='softstor-container'>
 
           <div className='softstor-left-container'>
+            <p style={{fontSize:'16px',fontFamily:'"Poppins", serif',color:'#E92B5B'}}>Developed By</p>
             <img src={softstorlogo} alt='softstor logo' className='softstor-logo'/>
           </div>
 
