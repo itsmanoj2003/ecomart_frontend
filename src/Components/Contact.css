@@ -129,6 +129,7 @@ strong{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .softstor-logo{
@@ -137,6 +138,10 @@ strong{
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
 }
 
+
+.softstor-left-container p{
+  display: none;
+}
 
 .softstor-right-container{
   height: 500px;
@@ -313,6 +318,15 @@ strong{
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .softstor-right-container p{
+    display: none;
+  }
+
+
+  .softstor-left-container p{
+    display: flex;
   }
 
   
