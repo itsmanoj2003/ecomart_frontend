@@ -9,6 +9,7 @@ const sanitizeText = (text) => {
 };
 
 export default function Bill() {
+  // Bill
   const navigate = useNavigate();
 
   useEffect(() => {
