@@ -9,7 +9,6 @@ const sanitizeText = (text) => {
 };
 
 export default function Bill() {
-  // Bills
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,9 +18,6 @@ export default function Bill() {
       navigate('/');
       return;
     }
-
-    const DELIVERY_CHARGE = 100;
-    const grandTotal = order.total + DELIVERY_CHARGE;
 
     const doc = new jsPDF();
     doc.setFontSize(18);
@@ -44,9 +40,9 @@ export default function Bill() {
       ]);
     });
 
-    // Add delivery charge and total
-    tableRows.push(["", "", "Delivery Charge", `Rs.${DELIVERY_CHARGE}`]);
-    tableRows.push(["", "", "Total", `Rs.${grandTotal}`]);
+    // Show delivery charge as free (not included in total)
+    tableRows.push(["", "", "Delivery Charge", "Free"]);
+    tableRows.push(["", "", "Total", `Rs.${order.total}`]);
 
     autoTable(doc, {
       head: [tableColumn],
@@ -63,6 +59,3 @@ export default function Bill() {
 
   return <p className="bill-message">Generating your bill...</p>;
 }
-
-
-
