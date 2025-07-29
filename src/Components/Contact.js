@@ -1,6 +1,10 @@
 import React from 'react';
 import './Contact.css';
-import { FaWhatsapp, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaEnvelope, FaGlobe } from 'react-icons/fa';
+
+
+
+import softstorlogo from '../Components/assets/softstorlogo.png'
 
 const Contact = () => {
   return (
@@ -32,6 +36,40 @@ const Contact = () => {
           <p>Feel free to reach out for any queries, suggestions or partnership opportunities.</p>
         </div>
       </div>
+
+
+      <div className='softstor-container'>
+
+          <div className='softstor-left-container'>
+            <img src={softstorlogo} alt='softstor logo' className='softstor-logo'/>
+          </div>
+
+          <div className='softstor-right-container'>
+            <p style={{fontSize:'16px',fontFamily:'"Poppins", serif'}}>Developed By</p>
+            <h2 style={{fontSize:'25px'}}>Soft Stor Technology</h2>
+
+            <p style={{fontSize:'13px',marginRight:'190px',marginTop:'20px'}}>Mobile No:</p>
+            <h5 style={{fontSize:'13px',marginRight:'155px',marginTop:'10px'}}>+91 6374358764</h5>
+            <h5 style={{fontSize:'13px',marginRight:'155px',marginTop:'10px'}}>+91 8610729420</h5>
+            <h5 style={{fontSize:'13px',marginRight:'155px',marginTop:'10px'}}>+91 7358916638</h5>
+
+            <div className="contact-socials">
+            <a href="https://softstortechnology.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <FaGlobe className="social-icon softstor-whatsapp" />
+            </a>
+            <a href="https://www.instagram.com/soft_stor_technology?igsh=MXFjd2cwYjB3MHFpag== " target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="social-icon softstor-instagram" />
+            </a>
+            <a href="mailto:softstortechnology@gmail.com">
+              <FaEnvelope className="social-icon softstor-email" />
+            </a>
+          </div>
+
+          </div>
+
+      </div>
+
+
     </div>
   );
 };

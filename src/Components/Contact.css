@@ -4,6 +4,8 @@
   justify-content: center;
   margin-top: 100px;
   font-family: "Poppins", serif;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-card {
@@ -104,11 +106,76 @@ strong{
   color: black;
 }
 
+
+/* Soft Stor Details */
+
+.softstor-container{
+  height: 500px;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #333;
+  display: flex;
+}
+
+.softstor-left-container{
+  height: 500px;
+  width: 50%;
+  border-radius: 20px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.softstor-logo{
+    height: 300px;
+    width: 300px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+
+.softstor-right-container{
+  height: 500px;
+  width: 50%;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  background-color: #E92B5B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.softstor-whatsapp {
+  color: #E92B5B;
+}
+
+.softstor-instagram {
+  color: #E92B5B;
+}
+
+.softstor-email {
+  color: #E92B5B;
+}
+
+
+
+
+
+
+
 /* Responsive */
 @media screen and (max-width: 825px) {
  .contact-wrapper {
     margin-top: 50px;
     padding: 0 10px;
+    overflow: hidden;
   }
 
   .contact-card {
@@ -166,6 +233,73 @@ strong{
     line-height: 1.4;
     text-align: center;
   }
+
+
+
+  /* Soft Stor Container */
+    .softstor-container {
+    flex-direction: column;
+    height: auto;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin-bottom: 30px;
+    border-radius: 20px;
+  }
+
+  .softstor-left-container {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    border-radius: 20px;
+    padding-bottom: 20px;
+  }
+
+  .softstor-logo {
+    width: 180px;
+    height: 180px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
+  }
+
+  .softstor-right-container {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 25px 15px;
+    text-align: center;
+  }
+
+  .softstor-right-container h2 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .softstor-right-container p,
+  .softstor-right-container h5 {
+    font-size: 14px;
+    color: white;
+    margin: 6px 0;
+  }
+
+  .contact-socials {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+    color: #E92B5B;
+  }
+
+  
 
 }
 
