@@ -49,10 +49,11 @@ const Contact = () => {
             <h2 style={{fontSize:'25px'}}>Soft Stor Technology</h2>
 
             <p style={{fontSize:'13px',marginRight:'190px',marginTop:'20px'}}>Mobile No:</p>
-            <h5 style={{fontSize:'13px',marginRight:'180px',marginTop:'10px'}}><a href="tel:+916374358764" target="_blank" rel="noopener noreferrer" style={{color:'white'}}>+91 6374358764</a></h5>
-            <h5 style={{fontSize:'13px',marginRight:'180px',marginTop:'10px'}}><a href="tel:+918610729420" target="_blank" rel="noopener noreferrer" style={{color:'white'}}>+91 8610729420</a></h5>
-            <h5 style={{fontSize:'13px',marginRight:'180px',marginTop:'10px'}}><a href="tel:+917358916638" target="_blank" rel="noopener noreferrer" style={{color:'white'}}>+91 7358916638</a></h5>
-
+            <div className='contact-numbers'>
+              <h5 style={{fontSize:'13px',marginRight:'180px',marginTop:'10px'}}><a href="tel:+916374358764" target="_blank" rel="noopener noreferrer" style={{color:'white'}}>+91 6374358764</a></h5>
+              <h5 style={{fontSize:'13px',marginRight:'180px',marginTop:'10px'}}><a href="tel:+918610729420" target="_blank" rel="noopener noreferrer" style={{color:'white'}}>+91 8610729420</a></h5>
+              <h5 style={{fontSize:'13px',marginRight:'180px',marginTop:'10px'}}><a href="tel:+917358916638" target="_blank" rel="noopener noreferrer" style={{color:'white'}}>+91 7358916638</a></h5>
+            </div>
             <div className="contact-socials">
             <a href="https://softstortechnology.netlify.app/" target="_blank" rel="noopener noreferrer">
               <FaGlobe className="social-icon softstor-whatsapp" />
