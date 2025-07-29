@@ -16,6 +16,7 @@ export default function Cart() {
         name: '',
         mobile: '',
         address: '',
+        city: '',
         items: [],
         total: 0
     });
@@ -36,11 +37,8 @@ export default function Cart() {
                 try {
                     const res = await axios.get(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`);
                     const address = res.data.display_name || '';
-                    if (address) {
-                        setOrderdata(prev => ({ ...prev, address }));
-                    } else {
-                        alert("Couldn't fetch address from location.");
-                    }
+                    const city = res.data.address?.city || res.data.address?.town || res.data.address?.village || '';
+                    setOrderdata(prev => ({ ...prev, address, city }));
                 } catch (err) {
                     console.error(err);
                     alert("Failed to fetch location.");
@@ -54,12 +52,18 @@ export default function Cart() {
 
     const handleOrder = (e) => {
         e.preventDefault();
-    
-        if (!orderdata.name || !orderdata.mobile || !orderdata.address) {
+
+        if (!orderdata.name || !orderdata.mobile || !orderdata.address || !orderdata.city) {
             alert("Please fill in all the required fields.");
             return;
         }
-    
+
+        const cityName = orderdata.city.trim().toLowerCase();
+        if (cityName !== 'sankarankovil' && totalPrice <= 1000) {
+            alert("Minimum order amount must be more than ₹1000 for your city.");
+            return;
+        }
+
         const updatedOrder = {
             ...orderdata,
             items: cart.map(item => ({
@@ -70,9 +74,7 @@ export default function Cart() {
             })),
             total: totalPrice
         };
-    
-        setOrderdata(updatedOrder);
-    
+
         axios.post("https://ecomart-api-c4er.onrender.com/ecomart/order", updatedOrder)
             .then(res => {
                 alert("Order Placed Successfully!");
@@ -82,13 +84,14 @@ export default function Cart() {
                 setTimeout(() => {
                     navigate('/ordersuccess');
                 }, 1000);
+                console.log("Data before sending:", updatedOrder);
             })
             .catch(error => {
                 console.error("Order Failed:", error);
                 alert("Order Failed! Try Again.");
             });
     };
-    
+
     return (
         <div className='cart'>
             <div className="cart-page">
@@ -115,15 +118,24 @@ export default function Cart() {
                         /><br />
                         <textarea
                             name="address"
-                            placeholder="Enter Your Address"
+                            placeholder="Enter Your Address & Town Name"
                             className="cart-address"
                             onChange={handleChange}
                             value={orderdata.address}
                             required
                             rows={3}
                         /><br />
+                        <input
+                            type='text'
+                            name="city"
+                            placeholder='Enter Your Town'
+                            className='cart-city'
+                            onChange={handleChange}
+                            value={orderdata.city}
+                            required
+                        /><br />
                         <button type="button" className="get-location-btn" onClick={handleLocation}>
-                        🎯 Use My Location
+                            🎯 Use My Location
                         </button><br />
                         <div className="cart-items">
                             {cart.map((item, index) => (
