@@ -59,7 +59,7 @@ export default function Cart() {
         }
 
         const cityName = orderdata.city.trim().toLowerCase();
-        if (cityName !== 'sankarankovil' && totalPrice <= 1000) {
+        if (cityName !== 'sankarankovil' && cityName !== 'snkl' && cityName !== 'sangai' && totalPrice <= 1000) {
             alert("Minimum order amount must be more than ₹1000 for your city.");
             return;
         }
@@ -96,7 +96,7 @@ export default function Cart() {
         <div className='cart'>
             <div className='cart-deliverymsg'>
                 <marquee behavior="scroll" direction="left">
-                    Delivery is available only to places within 10 km from Sankarankovil. [ Places like Kurukkalpatti, Karivalamvandanallur, Thiruvengadam, Kuruvikulam, Veerasigamani, Mullikulam ]
+                    Delivery is available only to places near Sankarankovil. [ Places like Kurukkalpatti, Karivalamvandanallur, Thiruvengadam, Kuruvikulam, Veerasigamani, Mullikulam ]
                 </marquee>
             </div>
             
