@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
-import { FaWhatsapp, FaInstagram, FaEnvelope, FaGlobe } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaEnvelope, FaGlobe, FaFacebook } from 'react-icons/fa';
 
 
 
@@ -12,8 +12,8 @@ const Contact = () => {
       <div className="contact-card">
         <div className="contact-left">
           <h2>Ecomart</h2>
-          <p className='addr'>Thiruvenkadam - Sankarnkovil Main Road<br />
-             Sankarankovil, Tenkasi District</p>
+          <p className='addr'>179, Thiruvenkadam Salai, Sankarankovil, <br/>Tenkasi District - 627756</p>
+          <h4 style={{marginBottom:'10px'}}><a href="tel:04636291036" target="_blank" rel="noopener noreferrer" className='cont-details' style={{color:'white',textDecoration:'underline'}}>Call : 04636291036</a></h4>
           <p><strong>Email:</strong> <a href="mailto:ecomartsangai@gmail.com" className='cont-details'>ecomartsangai@gmail.com</a></p>
           <p><strong>WhatsApp:</strong> <a href="https://wa.me/917200260036" target="_blank" rel="noopener noreferrer" className='cont-details'>+91 7200260036</a></p>
           <p><strong>Instagram:</strong> <a href="https://www.instagram.com/ecomart_sangai?utm_source=ig_web_button_share_sheet&igsh=MW03MzliMWtnNDYxMg==" target="_blank" rel="noopener noreferrer" className='cont-details'>@ecomart_sangai</a></p>
@@ -27,6 +27,9 @@ const Contact = () => {
             </a>
             <a href="mailto:ecomartsangai@gmail.com">
               <FaEnvelope className="social-icon email" />
+            </a>
+            <a href="https://www.facebook.com/share/16GpaLyqSB/" target='_blank'>
+              <FaFacebook className="social-icon facebook" />
             </a>
           </div>
         </div>

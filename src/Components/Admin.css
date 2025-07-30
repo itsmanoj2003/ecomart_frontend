@@ -231,6 +231,17 @@
     line-height: 50px;
 }
 
+
+.admin-searchbar{
+    margin-top: 15px;
+    width: 800px;
+}
+
+.admin-searchbar::placeholder{
+    font-family: "Poppins", serif;
+}
+
+
 .products-table{
     width: 100%;
     margin-top: 20px;
