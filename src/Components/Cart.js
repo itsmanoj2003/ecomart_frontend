@@ -4,6 +4,8 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+import gpayqr from '../Components/assets/gpay.jpg'
+
 export default function Cart() {
     const navigate = useNavigate();
     const { cart, addToCart, removeFromCart, clearCart } = useCart();
@@ -12,11 +14,14 @@ export default function Cart() {
 
     const [msg, setMsg] = useState('Your Cart is Empty');
 
+    const [showQRPopup, setShowQRPopup] = useState(false);
+
     const [orderdata, setOrderdata] = useState({
         name: '',
         mobile: '',
         address: '',
         city: '',
+        paymentMode: 'cod',
         items: [],
         total: 0
     });
@@ -53,8 +58,13 @@ export default function Cart() {
     const handleOrder = (e) => {
         e.preventDefault();
 
-        if (!orderdata.name || !orderdata.mobile || !orderdata.address || !orderdata.city) {
+        if (!orderdata.name || !orderdata.mobile || !orderdata.address || !orderdata.city || !orderdata.paymentMode) {
             alert("Please fill in all the required fields.");
+            return;
+        }
+
+        if (orderdata.paymentMode === 'online' && !orderdata.paymentId) {
+            alert("Please enter the transaction ID for online payment.");
             return;
         }
 
@@ -99,13 +109,13 @@ export default function Cart() {
                     Delivery is available only to places near Sankarankovil. [ Places like Kurukkalpatti, Karivalamvandanallur, Thiruvengadam, Kuruvikulam, Veerasigamani, Mullikulam ]
                 </marquee>
             </div>
-            
+
             <div className="cart-page">
                 <h1 className="cart-title">Your Cart</h1>
                 {cart.length === 0 ? (
                     <p className="empty-cart">{msg}</p>
                 ) : (
-                    <form className='cart-form' onSubmit={(e) => e.preventDefault()}>
+                    <form className='cart-form' onSubmit={handleOrder}>
                         <input
                             type='text'
                             name="name"
@@ -143,6 +153,48 @@ export default function Cart() {
                         <button type="button" className="get-location-btn" onClick={handleLocation}>
                             🎯 Use My Location
                         </button><br />
+
+                        {/* Payment Mode */}
+                        <div className="payment-mode-section">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="paymentMode"
+                                    value="cod"
+                                    checked={orderdata.paymentMode === 'cod'}
+                                    onChange={handleChange}
+                                />
+                                Cash on Delivery
+                            </label>
+                            <label style={{ marginLeft: '20px' }}>
+                                <input
+                                    type="radio"
+                                    name="paymentMode"
+                                    value="gpay"
+                                    checked={orderdata.paymentMode === 'gpay'}
+                                    onChange={(e) => {
+                                        handleChange(e);
+                                        setShowQRPopup(true);
+                                    }}
+                                />
+                                Online Payment
+                            </label>
+                        </div><br />
+
+                        {/* QR Code Popup */}
+                        {showQRPopup && orderdata.paymentMode === 'gpay' && (
+                            <div className="qr-popup">
+                                <div className="qr-popup-content">
+                                    <h3>Scan to Pay via GPay</h3>
+                                    <img src={gpayqr} alt="GPay QR" className="qr-image" />
+                                    <button type="button" className="close-qr" onClick={() => setShowQRPopup(false)}>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Cart Items */}
                         <div className="cart-items">
                             {cart.map((item, index) => (
                                 <div key={index} className="cart-item">
@@ -161,14 +213,12 @@ export default function Cart() {
                                 </div>
                             ))}
                         </div>
-                        <input type="hidden" name="items" value={JSON.stringify(orderdata.items)} />
-                        <input type="hidden" name="total" value={orderdata.total} />
+
                         <h2 className="total-price">Total Price: Rs.{totalPrice}</h2>
-                        <button type="submit" onClick={handleOrder} className='order-btn'>Place An Order</button>
+                        <button type="submit" className='order-btn'>Place An Order</button>
                     </form>
                 )}
             </div>
-            
         </div>
     );
 }
