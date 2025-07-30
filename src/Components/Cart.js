@@ -94,6 +94,12 @@ export default function Cart() {
 
     return (
         <div className='cart'>
+            <div className='cart-deliverymsg'>
+                <marquee behavior="scroll" direction="left">
+                    Delivery is available only to places within 10 km from Sankarankovil. [ Places like Kurukkalpatti, Karivalamvandanallur, Thiruvengadam, Kuruvikulam, Veerasigamani, Mullikulam ]
+                </marquee>
+            </div>
+            
             <div className="cart-page">
                 <h1 className="cart-title">Your Cart</h1>
                 {cart.length === 0 ? (
@@ -162,6 +168,7 @@ export default function Cart() {
                     </form>
                 )}
             </div>
+            
         </div>
     );
 }

@@ -6,6 +6,13 @@
     font-family: "Poppins", serif;
 }
 
+.cart-deliverymsg{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 234, 0);
+    display: flex;
+    align-items: center;
+}
 
 .cart-page {
     max-width: 800px;
@@ -180,14 +187,27 @@
 
 
 
+
+
+
 /* Media Query */
 
 /* Normal Mobile */
 
 @media (max-width: 430px) {
 
+    .cart{
+        overflow-x: hidden;
+        margin-top: 0px;
+    }
+
     .cartform-name,.cart-mobilenumber,.cart-address,.cart-city{
         width: 330px;
+    }
+
+    .cart-deliverymsg{
+        height: 30px;
+        font-size: 12px;
     }
 
     .cart-items {
@@ -299,6 +319,19 @@
 /* Pixel */
 
 @media only screen and (min-width: 440px) and (max-width: 500px){
+
+    
+     .cart{
+        overflow-x: hidden;
+        margin-top: 0px;
+    }
+
+    .cart-deliverymsg{
+        height: 30px;
+        font-size: 12px;
+    }
+
+    
     .cart-items {
         display: flex;
         flex-direction: column;
@@ -407,6 +440,17 @@
 
 @media (max-width: 360px){
 
+
+     .cart{
+        overflow-x: hidden;
+        margin-top: 0px;
+    }
+
+    .cart-deliverymsg{
+        height: 30px;
+        font-size: 12px;
+    }
+
     .cart{
         height: auto;
         overflow: hidden;
@@ -421,5 +465,26 @@
         font-size: 12px;
         font-family: "Poppins", serif;
     }
+
+}
+
+
+
+/* Tab */
+
+@media only screen and (min-width:820px) and (max-width: 850px){
+
+
+    .cart{
+        overflow-x: hidden;
+        margin-top: 0px;
+    }
+
+    .cart-deliverymsg{
+        height: 30px;
+        font-size: 12px;
+    }
+
+
 
 }
